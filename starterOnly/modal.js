@@ -11,30 +11,28 @@ function editNav() {
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 
+const modalbg2 = document.querySelector(".bgRound2");
+
+const subMit = document.querySelectorAll(".btn-submit");
+
 const modalBtn = document.querySelectorAll(".modal-btn");
 
 const formData = document.querySelectorAll(".formData");
 
 const closeModal = document.querySelectorAll(".close");
 
-const closeThanks = document.querySelectorAll('.close-thanks');
-
-const buttonThanks = document.querySelectorAll('.button-thanks');
 
 // launch modal event
 modalBtn.forEach((btn) => {
 
     btn.addEventListener("click", launchModal)
 
+
 });
 closeModal.forEach((span) => {
     span.addEventListener("click", closemodal)
 
 });
-
-
-
-
 
 
 // launch modal form
@@ -45,7 +43,9 @@ function launchModal() {
 
 function closemodal() {
     modalbg.style.display = "none";
+
 }
+
 
 
 function validateFirstname(field) {
@@ -205,10 +205,10 @@ function validCheck(field) {
     }
 }
 
-
 function validate() {
 
     let errors = 0;
+    console.log(errors);
     const firstInput = document.getElementById("first");
     const lastInput = document.getElementById("last");
     const mail = document.querySelector("#email");
@@ -243,12 +243,23 @@ function validate() {
 
     if (errors !== 0) {
         return false;
+    }else{
+        return true;
     }
-    alert('formulaire validé');
-    return true;
+
 
 }
+document.getElementById("formulaire").addEventListener("submit", function(e){
+    if(!validate()){
+        e.preventDefault();    //stop form from submitting
+    }else{
+        modalbg2.style.display = "block";
+        alert("zdzdadada");
+    }
 
+
+
+});
 
 
 
