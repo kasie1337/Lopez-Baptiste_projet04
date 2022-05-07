@@ -41,7 +41,7 @@
                 Vous aimez jouer ? Notre prochain évènement gaming est ouvert
                 aux réservations... Places limitées !
             </p>
-            <button class="btn-signup modal-btn">
+            <button class="btn-signup modal-btn" onclick="resetForm()">
                 je m'inscris
             </button>
         </div>
@@ -217,7 +217,7 @@
     </div>
 
     <div class="bgRound2">
-        <div class="content">
+        <div class="content contentmodal">
             <span class="close"></span>
 
             <div class="modal-body">
@@ -225,10 +225,10 @@
                     <span>votre inscription</span>
                 </p>
                 <input
-                        class="btn-submit button"
-                        type="submit"
+                        class="btn-submit button closesubmit"
+                        type="button"
                         value="Fermer"
-
+                        onclick="closemodal()"
 
                 />
 
