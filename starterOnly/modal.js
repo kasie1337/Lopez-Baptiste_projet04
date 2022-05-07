@@ -14,9 +14,9 @@ const modalbg = document.querySelector(".bground");
 const modalbg2 = document.querySelector(".bgRound2");
 
 const subMit = document.querySelectorAll(".closesubmit");
-const formulaireSend = document.getElementById("formulaire");
+
 const modalBtn = document.querySelectorAll(".modal-btn");
-const allInput = document.querySelectorAll("input");
+
 const formData = document.querySelectorAll(".formData");
 
 const closeModal = document.querySelectorAll(".close");
@@ -34,13 +34,12 @@ closeModal.forEach((span) => {
 
 });
 function resetForm() {
-    document.getElementById("formulaire").reset();
-    if(!validate()){
-
-    }
+    (document.getElementById("formulaire").reset());
 }
 
-
+function dontreset() {
+    (document.document.getElementById("formulaire")).reset.disabled;
+}
 // launch modal form
 function launchModal() {
     modalbg.style.display = "block";
