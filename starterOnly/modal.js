@@ -17,8 +17,6 @@ const subMit = document.querySelectorAll(".closesubmit");
 
 const modalBtn = document.querySelectorAll(".modal-btn");
 
-const formData = document.querySelectorAll(".formData");
-
 const closeModal = document.querySelectorAll(".close");
 
 
@@ -247,11 +245,7 @@ function validate() {
         errors++;
     }
 
-    if (errors !== 0) {
-        return false;
-    }else{
-        return true;
-    }
+    return errors === 0;
 
 
 }
