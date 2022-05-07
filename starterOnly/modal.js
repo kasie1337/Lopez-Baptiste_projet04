@@ -52,7 +52,7 @@ function closemodal() {
 
 
 
-function validateFirstname(field) {
+const validateFirstname = (field) => {
     let parentFirstname = field.parentNode;
 
     if (field.value === "") {
@@ -74,7 +74,7 @@ function validateFirstname(field) {
 }
 
 
-function validateLastname(field) {
+const  validateLastname = (field) => {
     let parentLastname = field.parentNode;
     if (field.value === "") {
         console.log("name obligatoire");
@@ -96,7 +96,7 @@ function validateLastname(field) {
 
 }
 
-function validEmail(field) {
+const  validEmail = (field) => {
     let emailRegExp = RegExp('^[a-zA-Z0-9.-_]+[@][a-zA-Z0-9.-_]+[.][a-z]{2,10}$', 'g');
     let parentEmail = field.parentNode;
     let testMail = emailRegExp.test(field.value);
@@ -121,7 +121,7 @@ function validEmail(field) {
     }
 }
 
-function validBirthday(field) {
+const  validBirthday = (field) => {
 
     const birthdate = field.value;
     let dateOfBirthdate = new Date(birthdate);
@@ -155,7 +155,7 @@ function validBirthday(field) {
 
 }
 
-function validQuantity(field) {
+const validQuantity = (field) => {
     const parse = parseInt(field.value);
     let parentQuantity = field.parentNode;
     console.log(parse);
@@ -193,7 +193,7 @@ const validCity = (field) => {
     return false;
 }
 
-function validCheck(field) {
+const validCheck = (field) => {
     let parentCase = field.parentNode;
 
 
