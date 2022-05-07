@@ -35,9 +35,7 @@ function resetForm() {
     (document.getElementById("formulaire").reset());
 }
 
-function dontreset() {
-    (document.document.getElementById("formulaire")).reset.disabled;
-}
+
 // launch modal form
 function launchModal() {
     modalbg.style.display = "block";
@@ -47,7 +45,7 @@ function launchModal() {
 function closemodal() {
     modalbg.style.display = "none";
     modalbg2.style.display = "none";
-    subMit.style.display = "none";
+
 }
 
 
@@ -249,6 +247,7 @@ function validate() {
 
 
 }
+
 document.getElementById("formulaire").addEventListener("submit", function(e){
     if(!validate()){
         e.preventDefault();
@@ -260,8 +259,6 @@ document.getElementById("formulaire").addEventListener("submit", function(e){
         e.preventDefault();
 
     }
-
-
 
 });
 
