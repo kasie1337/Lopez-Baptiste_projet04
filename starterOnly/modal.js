@@ -12,24 +12,22 @@ const modalbg = document.querySelector(".bground");
 
 const modalbg2 = document.querySelector(".bgRound2");
 
-const subMit = document.querySelectorAll(".closesubmit");
-
 const modalBtn = document.querySelectorAll(".modal-btn");
 
 const closeModal = document.querySelectorAll(".close");
 
-const modal2btn = document.querySelectorAll(".modal-btn-thanks");
+const modal2btn = document.querySelector(".modal-btn-thanks");
 
 // launch modal event
 modalBtn.forEach((btn) => {
   btn.addEventListener("click", launchModal);
 });
-modal2btn.forEach((btn) => {
-  btn.addEventListener("click", onSubmit);
-});
+modal2btn.addEventListener("click", onSubmit);
+
 closeModal.forEach((span) => {
   span.addEventListener("click", closemodal);
 });
+
 function resetForm() {
   document.getElementById("formulaire").reset();
 }
@@ -48,7 +46,7 @@ function onSubmit(e) {
     console.log("formulaire valide");
     modalbg2.style.display = "block";
     modalbg.style.display = "none";
-    console.log("test");
+
   }
 }
 
@@ -211,7 +209,6 @@ const validCheck = (field) => {
 
 function validate() {
   let errors = 0;
-  console.log(errors);
   const firstInput = document.getElementById("first");
   const lastInput = document.getElementById("last");
   const mail = document.querySelector("#email");
@@ -246,4 +243,3 @@ function validate() {
   console.log("isValid", isValid);
   return isValid;
 }
-
