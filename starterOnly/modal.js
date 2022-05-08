@@ -247,16 +247,3 @@ function validate() {
   return isValid;
 }
 
-/*document.getElementById("formulaire").addEventListener("submit", function (e) {
-    if (validate()) {
-        e.preventDefault();
-    } else {
-
-        modalbg2.style.display = "block";
-        modalbg.style.display = "none";
-
-        e.preventDefault();
-
-    }
-
-});*/
