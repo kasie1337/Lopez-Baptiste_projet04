@@ -176,7 +176,6 @@ const validCity = (field) => {
   for (let q = 0; q < field.length; q++) {
     if (field[q].checked) {
       let parentCheck = field[q].parentNode;
-      console.log(typeof field);
       val = field[q].value;
       console.log(val);
       parentCheck.dataset.error = "";
